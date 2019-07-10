@@ -11,6 +11,10 @@
 <body>
     <div id="main">
         <h2>Hello!</h2>
+        <form id="search" action="https://www.google.com/search" method="GET">
+            <input type="text" name="q" placeholder="Google Search" autofocus>
+            <input type="submit" value="Search">
+        </form>
         <?php
             echo '<div id="buttons">';
                 $array = array('Mantis', 'Google', 'Youtube');
