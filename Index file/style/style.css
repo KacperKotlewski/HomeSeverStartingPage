@@ -35,7 +35,9 @@ h2 {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 30vh;
-  margin: 5vh;
+  margin: 0px;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
   font-family: 'Lato', sans-serif;
   background: -webkit-gradient(linear, right top, left top, from(#00beff), to(#8800ff));
   background: linear-gradient(270deg, #00beff, #8800ff);
@@ -70,7 +72,6 @@ h2 {
 }
 
 #search {
-  margin-top: -20px;
   margin-bottom: 4vh;
   width: 100%;
   display: -webkit-box;
@@ -123,6 +124,8 @@ div#buttons {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 div#buttons a.button {
@@ -171,5 +174,62 @@ div#buttons a:visited {
 
 div#buttons a:hover {
   color: #333;
+}
+
+@media (orientation: portrait) {
+  #main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 20vw;
+    margin: 0px;
+    margin-top: 10vh;
+  }
+  #search {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #search input[type=text], #search select {
+    width: 50vw;
+  }
+  #search input[type=submit] {
+    width: 50vw;
+    margin: 8px 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
